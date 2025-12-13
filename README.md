@@ -1,16 +1,129 @@
-# React + Vite
+# SIPREL - Sistema de Registro de Participantes
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sistema web moderno para gestión de participantes y control de asistencia con escaneo de códigos de barras.
 
-Currently, two official plugins are available:
+## 📁 Estructura del Proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+siprel/
+├── frontend/              # Aplicación React
+│   ├── src/
+│   │   ├── components/    # Componentes reutilizables
+│   │   ├── pages/         # Páginas de la aplicación
+│   │   ├── styles/        # Estilos organizados
+│   │   │   ├── index.css         # Estilos globales y utilidades
+│   │   │   ├── variables.css     # Variables CSS
+│   │   │   └── modules/          # CSS Modules por componente
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── public/
+│   ├── package.json
+│   └── vite.config.js
+│
+└── backend/               # API Django REST Framework
+    ├── api/
+    ├── siprel_backend/
+    ├── manage.py
+    └── requirements.txt
+```
 
-## React Compiler
+## 🚀 Inicio Rápido
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend
 
-## Expanding the ESLint configuration
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+El frontend estará disponible en `http://localhost:5174`
+
+### Backend
+
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate  # En Windows: venv\Scripts\activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+```
+
+El backend estará disponible en `http://localhost:8000`
+
+## 🎨 Organización de CSS
+
+### Estilos Globales
+- `frontend/src/styles/index.css` - Punto de entrada principal
+- `frontend/src/styles/variables.css` - Variables CSS (colores, espaciado, etc.)
+
+### CSS Modules
+Cada componente tiene su propio CSS Module en `frontend/src/styles/modules/`:
+- `Layout.module.css`
+- `Dashboard.module.css`
+- `Participants.module.css`
+- `Attendance.module.css`
+- `Login.module.css`
+- `CustomSelect.module.css`
+
+**Ventajas:**
+- ✅ Scope local automático (sin conflictos de nombres)
+- ✅ Tree-shaking en producción
+- ✅ Fácil mantenimiento
+- ✅ Organización clara
+
+## 🛠️ Tecnologías
+
+### Frontend
+- **React 18** - UI Framework
+- **Vite** - Build tool
+- **React Router** - Navegación
+- **Lucide React** - Iconos
+- **XLSX** - Exportación a Excel
+
+### Backend
+- **Django 4.2** - Framework web
+- **Django REST Framework** - API REST
+- **SQLite** - Base de datos (desarrollo)
+
+## 📦 Scripts Disponibles
+
+### Frontend
+- `npm run dev` - Servidor de desarrollo
+- `npm run build` - Build de producción
+- `npm run preview` - Preview del build
+
+### Backend
+- `python manage.py runserver` - Servidor de desarrollo
+- `python manage.py migrate` - Aplicar migraciones
+- `python manage.py createsuperuser` - Crear usuario admin
+
+## 🔐 Roles de Usuario
+
+- **Admin** - Acceso completo
+- **Supervisor** - Gestión de participantes y reportes
+- **Digitador** - Registro de asistencia
+
+## 📝 Características
+
+- ✅ Dashboard con métricas en tiempo real
+- ✅ Gestión de participantes (CRUD completo)
+- ✅ Control de asistencia
+- ✅ Escaneo de códigos de barras (PDF417)
+- ✅ Exportación a Excel
+- ✅ Validación de formularios robusta
+- ✅ Diseño responsive y moderno
+- ✅ Filtros y búsqueda avanzada
+
+## 🎯 Próximos Pasos
+
+- [ ] Implementar gráficos en Dashboard
+- [ ] Agregar autenticación JWT
+- [ ] Configurar PostgreSQL para producción
+- [ ] Implementar tests unitarios
+- [ ] Dockerizar la aplicación
+
+## 📄 Licencia
+
+Este proyecto es privado y confidencial.

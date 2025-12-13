@@ -1,0 +1,89 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, hsl(210, 40%, 96%) 0%, hsl(220, 90%, 96%) 100%);
+}
+
+.loginCard {
+    width: 100%;
+    max-width: 400px;
+    padding: 2.5rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    background: var(--color-brand);
+    border-radius: 12px;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--color-text-muted);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.inputWrapper {
+    position: relative;
+}
+
+.inputIcon {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    color: var(--color-text-muted);
+}
+
+.inputField {
+    padding-left: 40px !important;
+}
+
+.submitBtn {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.75rem;
+}
+
+.spinAnimation {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

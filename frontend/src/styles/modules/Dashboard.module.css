@@ -1,0 +1,341 @@
+.header {
+    margin-bottom: var(--space-8);
+}
+
+.title {
+    margin-bottom: 0.25rem;
+}
+
+.subtitle {
+    color: var(--color-text-muted);
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.dateWrapper {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 0.5rem 0.75rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.dateIcon {
+    color: var(--color-text-muted);
+    margin-right: 0.5rem;
+}
+
+.dateInput {
+    border: none;
+    outline: none;
+    color: var(--color-text);
+    font-family: inherit;
+    font-size: 0.875rem;
+    background: transparent;
+    cursor: pointer;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-6);
+    margin-bottom: var(--space-8);
+}
+
+.cardHeader {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.iconWrapper {
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.moreBtn {
+    color: var(--color-text-light);
+}
+
+.value {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.change {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+}
+
+.positiveChange {
+    color: var(--color-success);
+    font-weight: 600;
+}
+
+.cardDescription {
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    line-height: 1.4;
+    border-top: 1px solid var(--color-border);
+    padding-top: 0.75rem;
+}
+
+.sectionTitle {
+    margin-bottom: 1rem;
+}
+
+.tableCard {
+    padding: 0;
+    overflow: hidden;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.thead {
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.th {
+    padding: 1rem;
+    text-align: left;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+}
+
+.tr {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.td {
+    padding: 1rem;
+}
+
+.tdName {
+    font-weight: 500;
+}
+
+.tdDate {
+    color: var(--color-text-muted);
+}
+
+.sectionContainer {
+    background: #fff;
+    /* or transparent if preferred, but user said 'cajas' */
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Specific internal overrides if needed */
+.sectionContainer .grid {
+    margin-bottom: 0;
+    /* Remove margin since container handles padding */
+}
+
+/* Date Navigation */
+.dateNav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: white;
+    padding: 0.5rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.navBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 50%;
+    color: var(--color-text-muted);
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navBtn:hover:not(:disabled) {
+    background: var(--color-bg-light);
+    color: var(--color-brand);
+}
+
+.navBtn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.currentMonth {
+    font-weight: 600;
+    color: var(--color-text);
+    min-width: 120px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* Filters (Matching Participants Style) */
+.filterCard {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.filterControls {
+    display: flex;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.searchWrapper {
+    position: relative;
+    flex: 1;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    color: var(--color-text-muted);
+}
+
+.searchInput {
+    padding-left: 38px !important;
+    width: 100%;
+}
+
+/* Action Colors */
+.actionCreate {
+    color: #10B981;
+    /* Green */
+    font-weight: 500;
+}
+
+.actionUpdate {
+    color: #F59E0B;
+    /* Amber/Yellow */
+    font-weight: 500;
+}
+
+.actionDelete {
+    color: #EF4444;
+    /* Red */
+    font-weight: 500;
+}
+
+.actionHide {
+    color: var(--color-text-muted);
+}
+
+/* Date Navigation */
+.dateNav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: white;
+    padding: 0.5rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.navBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 50%;
+    color: var(--color-text-muted);
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navBtn:hover:not(:disabled) {
+    background: var(--color-bg-light);
+    color: var(--color-brand);
+}
+
+.navBtn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.currentMonth {
+    font-weight: 600;
+    color: var(--color-text);
+    min-width: 120px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* Filters */
+.filterBar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.searchInputWrapper {
+    position: relative;
+    flex: 1;
+    max-width: 300px;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-muted);
+}
+
+.searchInput {
+    width: 100%;
+    padding: 0.5rem 0.75rem 0.5rem 2.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    outline: none;
+    font-size: 0.875rem;
+}
+
+/* Action Colors */
+.actionCreate {
+    color: #10B981;
+    /* Green */
+    font-weight: 500;
+}
+
+.actionUpdate {
+    color: #F59E0B;
+    /* Amber/Yellow */
+    font-weight: 500;
+}
+
+.actionDelete {
+    color: #EF4444;
+    /* Red */
+    font-weight: 500;
+}
+
+.actionHide {
+    color: var(--color-text-muted);
+}

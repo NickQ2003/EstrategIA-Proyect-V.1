@@ -1,0 +1,162 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--space-8);
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--color-text-muted);
+}
+
+.card {
+    padding: 3rem;
+    margin-bottom: var(--space-8);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.inputWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.scanIcon {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    color: var(--color-text-muted);
+}
+
+.scanInput {
+    padding-left: 60px !important;
+    font-size: 1.5rem;
+    height: 64px;
+}
+
+.verifyBtn {
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem;
+    font-size: 1.125rem;
+}
+
+/* Feedback Success */
+.feedbackSuccess {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: hsl(142, 71%, 96%);
+    border: 1px solid hsl(142, 71%, 90%);
+    border-radius: var(--radius-md);
+    text-align: center;
+    animation: slideUp 0.3s ease-out;
+}
+
+.iconCircleSuccess {
+    width: 64px;
+    height: 64px;
+    background: var(--color-success);
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.successTitle {
+    color: darkgreen;
+    margin-bottom: 0.25rem;
+}
+
+.personName {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.personDetail {
+    color: var(--color-text-muted);
+}
+
+/* Feedback Error */
+.feedbackError {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: hsl(0, 84%, 96%);
+    border: 1px solid hsl(0, 84%, 90%);
+    border-radius: var(--radius-md);
+    text-align: center;
+    animation: shake 0.3s ease-in-out;
+}
+
+.iconCircleError {
+    width: 64px;
+    height: 64px;
+    background: var(--color-danger);
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.errorTitle {
+    color: darkred;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+.animateSpin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
