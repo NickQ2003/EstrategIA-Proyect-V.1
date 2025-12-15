@@ -5,7 +5,7 @@
 
 .sidebar {
     width: 260px;
-    background-color: white;
+    background-color: var(--color-surface);
     border-right: 1px solid var(--color-border);
     display: flex;
     flex-direction: column;
@@ -17,6 +17,10 @@
 .sidebarHeader {
     padding: var(--space-6);
     border-bottom: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
 }
 
 .brand {
@@ -60,6 +64,11 @@
     transition: all var(--transition-fast);
 }
 
+.navLink:hover {
+    background-color: var(--color-surface-hover);
+    color: var(--color-text-main);
+}
+
 .navLinkActive {
     color: var(--color-brand);
     background-color: var(--color-brand-light);
@@ -79,6 +88,11 @@
     width: 100%;
     padding: var(--space-3) var(--space-4);
     border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.btnLogout:hover {
+    background-color: var(--color-danger-light);
 }
 
 .main {

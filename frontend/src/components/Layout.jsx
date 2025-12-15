@@ -1,6 +1,7 @@
 import React from 'react';
 import { Outlet, NavLink, useNavigate } from 'react-router-dom';
 import { LayoutDashboard, Users, UserCheck, LogOut } from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
 import styles from '../styles/modules/Layout.module.css';
 
 const Layout = () => {
@@ -25,6 +26,7 @@ const Layout = () => {
                         <span className={styles.brandName}>SIPREL</span>
                         <span className={styles.brandVersion}>v1.0</span>
                     </h1>
+                    <ThemeToggle />
                 </div>
 
                 <nav className={styles.nav}>

@@ -1,0 +1,84 @@
+.toggleButton {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-medium);
+    overflow: hidden;
+}
+
+.toggleButton:hover {
+    background: var(--color-surface-hover);
+    border-color: var(--color-border-hover);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.toggleButton:active {
+    transform: translateY(0);
+}
+
+.toggleButton:focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+}
+
+.iconWrapper {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    position: absolute;
+    transition: all var(--transition-medium);
+    color: var(--color-text-main);
+}
+
+/* Sun icon - visible in light mode */
+.light .sunIcon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+.light .moonIcon {
+    opacity: 0;
+    transform: rotate(90deg) scale(0.5);
+}
+
+/* Moon icon - visible in dark mode */
+.dark .sunIcon {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.5);
+}
+
+.dark .moonIcon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+/* Add glow effect in dark mode */
+.dark .moonIcon {
+    filter: drop-shadow(0 0 8px rgba(167, 139, 250, 0.6));
+}
+
+.light .sunIcon {
+    filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.4));
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .toggleButton {
+        width: 44px;
+        height: 44px;
+    }
+}
