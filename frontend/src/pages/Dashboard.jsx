@@ -63,7 +63,7 @@ const Dashboard = () => {
             change: 'Interacciones totales',
             description: 'Conteo acumulado de todos los registros y acciones desde el inicio.',
             icon: Users,
-            color: 'blue'
+            color: 'brand'
         },
         {
             title: 'Registros del Mes',
@@ -71,7 +71,7 @@ const Dashboard = () => {
             change: calculateChange(),
             description: 'Nuevos participantes creados durante el mes seleccionado.',
             icon: UserPlus,
-            color: 'green'
+            color: 'success'
         },
         {
             title: 'Mes Anterior',
@@ -79,7 +79,7 @@ const Dashboard = () => {
             change: 'vs Seleccionado',
             description: 'Comparativa de registros con el mes inmediatamente anterior.',
             icon: UserCheck,
-            color: 'purple'
+            color: 'accent'
         },
         {
             title: 'Tasa de Asistencia',
@@ -87,7 +87,7 @@ const Dashboard = () => {
             change: '+2.4%',
             description: 'Porcentaje de participantes confirmados vs invitados esperados.',
             icon: ArrowUpRight,
-            color: 'orange'
+            color: 'warning'
         }
     ];
 
@@ -202,11 +202,11 @@ const Dashboard = () => {
                                         <div
                                             className={styles.iconWrapper}
                                             style={{
-                                                background: `var(--color-${stat.color === 'blue' ? 'brand' : stat.color}-light, #f3f4f6)`,
-                                                color: `var(--color-${stat.color === 'blue' ? 'brand' : stat.color}-dark, #374151)`
+                                                background: `var(--color-${stat.color}-light)`,
+                                                color: `var(--color-${stat.color})`
                                             }}
                                         >
-                                            <stat.icon size={22} color={stat.color === 'blue' ? 'var(--color-brand)' : 'currentColor'} />
+                                            <stat.icon size={22} color={`var(--color-${stat.color})`} />
                                         </div>
                                     </div>
                                     <div className={styles.value}>{stat.value}</div>

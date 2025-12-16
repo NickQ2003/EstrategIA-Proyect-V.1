@@ -19,7 +19,7 @@
 .dateWrapper {
     display: flex;
     align-items: center;
-    background: white;
+    background: var(--color-surface);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-sm);
     padding: 0.5rem 0.75rem;
@@ -132,7 +132,7 @@
 }
 
 .sectionContainer {
-    background: #fff;
+    background: var(--color-surface);
     /* or transparent if preferred, but user said 'cajas' */
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
@@ -247,7 +247,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    background: white;
+    background: var(--color-surface);
     padding: 0.5rem;
     border-radius: var(--radius-md);
     border: 1px solid var(--color-border);
