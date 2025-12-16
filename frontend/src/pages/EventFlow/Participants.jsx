@@ -218,7 +218,7 @@ const Participants = () => {
         const worksheet = XLSX.utils.json_to_sheet(participants);
         const workbook = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(workbook, worksheet, "Participantes");
-        XLSX.writeFile(workbook, "Participantes_SIPREL.xlsx");
+        XLSX.writeFile(workbook, "Participantes_EstrategIA.xlsx");
     };
 
     const resetForm = () => {

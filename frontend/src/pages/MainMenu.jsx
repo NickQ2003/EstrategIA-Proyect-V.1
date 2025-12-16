@@ -20,7 +20,7 @@ const MainMenu = () => {
             <div className={styles.header}>
                 <div className={styles.headerContent}>
                     <h1 className={styles.title}>
-                        Bienvenido a <span className={styles.brandName}>SIPREL</span>
+                        Bienvenido a <span className={styles.brandName}>EstrategIA</span>
                     </h1>
                     <p className={styles.subtitle}>
                         Selecciona el servicio al que deseas acceder

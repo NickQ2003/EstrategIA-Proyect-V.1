@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { KeyRound, Mail, Loader2, ArrowRight } from 'lucide-react';
 import styles from '../styles/modules/Login.module.css';
+import isologo from '../assets/isologo_estrategIA.png';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -14,7 +15,7 @@ const Login = () => {
         // Simulate network delay
         setTimeout(() => {
             setLoading(false);
-            navigate('/dashboard');
+            navigate('/');
         }, 1200);
     };
 
@@ -22,8 +23,8 @@ const Login = () => {
         <div className={styles.container}>
             <div className={`card ${styles.loginCard}`}>
                 <div className={styles.header}>
-                    <div className={styles.logo}>S</div>
-                    <h1 className={styles.title}>Bienvenido a SIPREL</h1>
+                    <img src={isologo} alt="EstrategIA Logo" className={styles.logoImage} style={{ height: '120px', marginBottom: '1rem' }} />
+                    <h1 className={styles.title}>Bienvenido a EstrategIA</h1>
                     <p className={styles.subtitle}>Ingrese sus credenciales para continuar</p>
                 </div>
 
@@ -35,8 +36,8 @@ const Login = () => {
                             <input
                                 type="email"
                                 className={`input ${styles.inputField}`}
-                                placeholder="admin@siprel.com"
-                                defaultValue="admin@siprel.com"
+                                placeholder="admin@estrategia.com"
+                                defaultValue="admin@estrategia.com"
                                 required
                             />
                         </div>

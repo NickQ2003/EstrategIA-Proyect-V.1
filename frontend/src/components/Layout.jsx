@@ -3,6 +3,7 @@ import { Outlet, NavLink, useNavigate } from 'react-router-dom';
 import { LayoutDashboard, Users, UserCheck, LogOut } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import styles from '../styles/modules/Layout.module.css';
+import logo from '../assets/imajilogo_estrategIA.png';
 
 const Layout = () => {
     const navigate = useNavigate();
@@ -22,10 +23,7 @@ const Layout = () => {
             {/* Sidebar */}
             <aside className={styles.sidebar}>
                 <div className={styles.sidebarHeader}>
-                    <h1 className={styles.brand}>
-                        <span className={styles.brandName}>SIPREL</span>
-                        <span className={styles.brandVersion}>v1.0</span>
-                    </h1>
+                    <img src={logo} alt="EstrategIA" style={{ height: '40px', maxWidth: '100%', objectFit: 'contain' }} />
                     <ThemeToggle />
                 </div>
 
