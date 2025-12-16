@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Search, CheckCircle, XCircle, Clock } from 'lucide-react';
-import styles from '../styles/modules/Attendance.module.css';
+import { Calendar, Clock, UserCheck, AlertCircle, Save, CheckCircle2, Search, Filter } from 'lucide-react';
+import styles from '../../styles/modules/Attendance.module.css';
 
 const Attendance = () => {
     const [docId, setDocId] = useState('');

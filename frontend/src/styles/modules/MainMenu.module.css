@@ -12,7 +12,7 @@
 .welcomeTitle {
     font-size: 3rem;
     font-weight: 800;
-    color: var(--text-primary);
+    color: var(--color-text-main);
     margin-bottom: 1rem;
     letter-spacing: -0.02em;
 }
@@ -26,7 +26,7 @@
 
 .welcomeSubtitle {
     font-size: 1.25rem;
-    color: var(--text-secondary);
+    color: var(--color-text-muted);
     font-weight: 400;
     letter-spacing: 0.01em;
 }
@@ -35,7 +35,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background: var(--bg-primary);
+    background: var(--color-bg);
     transition: background 0.3s ease;
 }
 
@@ -45,9 +45,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
-    background: var(--bg-secondary);
-    border-bottom: 1px solid var(--border-color);
-    box-shadow: 0 2px 8px var(--shadow-color);
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -78,7 +78,7 @@
 .headerTitle {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--text-primary);
+    color: var(--color-text-main);
     margin: 0;
     letter-spacing: 0.05em;
 }
@@ -90,14 +90,14 @@
     gap: 0.75rem;
     padding: 0.5rem 1rem;
     border-radius: 50px;
-    background: var(--bg-tertiary);
+    background: var(--color-surface-hover);
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
 }
 
 .userProfile:hover {
-    background: var(--bg-hover);
+    background: var(--color-surface-hover);
     box-shadow: 0 4px 12px var(--shadow-color);
 }
 
@@ -120,7 +120,7 @@
 .userName {
     font-size: 0.95rem;
     font-weight: 600;
-    color: var(--text-primary);
+    color: var(--color-text-main);
 }
 
 .userMenu {
@@ -130,7 +130,7 @@
     background: var(--bg-secondary);
     border-radius: 12px;
     box-shadow: 0 8px 24px var(--shadow-color);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--color-border);
     min-width: 180px;
     overflow: hidden;
     animation: fadeIn 0.2s ease;
@@ -153,7 +153,7 @@
     padding: 0.75rem 1rem;
     background: none;
     border: none;
-    color: var(--text-primary);
+    color: var(--color-text-main);
     font-size: 0.9rem;
     font-weight: 500;
     cursor: pointer;
@@ -164,7 +164,7 @@
 }
 
 .logoutBtn:hover {
-    background: var(--bg-hover);
+    background: var(--color-surface-hover);
     color: #ef4444;
 }
 
@@ -185,20 +185,20 @@
 /* Footer */
 .footer {
     padding: 2rem;
-    background: var(--bg-secondary);
-    border-top: 1px solid var(--border-color);
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
     text-align: center;
 }
 
 .footerText {
-    color: var(--text-secondary);
+    color: var(--color-text-muted);
     font-size: 0.9rem;
     margin: 0 0 0.5rem 0;
     font-weight: 500;
 }
 
 .footerCopy {
-    color: var(--text-tertiary);
+    color: var(--color-text-light);
     font-size: 0.85rem;
     margin: 0;
 }

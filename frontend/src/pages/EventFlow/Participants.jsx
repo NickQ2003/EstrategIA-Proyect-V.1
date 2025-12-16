@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, Plus, Filter, MoreVertical, FileDown, Edit, Trash2, EyeOff, Loader2, X, AlertTriangle, ScanBarcode, ArrowRight } from 'lucide-react';
-import CustomSelect from '../components/CustomSelect';
+import ThemeToggle from '../../components/ThemeToggle';
+import CustomSelect from '../../components/CustomSelect';
 import * as XLSX from 'xlsx';
-import styles from '../styles/modules/Participants.module.css';
+import styles from '../../styles/modules/Participants.module.css';
 
 const Participants = () => {
     // ... existing list management code ...

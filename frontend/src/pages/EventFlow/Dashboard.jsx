@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Users, UserPlus, UserCheck, CalendarDays, ArrowUpRight, Loader2, ChevronLeft, ChevronRight, Search, Filter, FileDown } from 'lucide-react';
-import CustomSelect from '../components/CustomSelect';
+import CustomSelect from '../../components/CustomSelect';
 import * as XLSX from 'xlsx';
-// import commonStyles from '../index.css';  <-- Removed to prevent build/runtime errors if not a module
-import styles from '../styles/modules/Dashboard.module.css';
+// import commonStyles from '../../index.css';  <-- Removed to prevent build/runtime errors if not a module
+import styles from '../../styles/modules/Dashboard.module.css';
 
 const Dashboard = () => {
     const [loading, setLoading] = useState(true);

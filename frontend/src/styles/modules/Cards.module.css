@@ -1,9 +1,9 @@
 .card {
     position: relative;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    background: var(--color-surface);
     backdrop-filter: blur(10px);
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid var(--color-border);
     padding: 2rem;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -42,7 +42,7 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
+    background: radial-gradient(circle, var(--color-brand-light), transparent 70%);
     opacity: 0;
     transition: opacity 0.4s ease;
     pointer-events: none;
@@ -65,8 +65,8 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: var(--color-surface-hover);
+    border: 1px solid var(--color-border);
     transition: all 0.3s ease;
 }
 
@@ -76,21 +76,21 @@
 }
 
 .icon {
-    color: #fff;
+    color: var(--color-text-main);
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #fff;
+    color: var(--color-text-main);
     margin-bottom: 0.75rem;
     letter-spacing: -0.02em;
 }
 
 .description {
     font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--color-text-muted);
     line-height: 1.6;
     margin-bottom: 1.5rem;
 }
@@ -100,7 +100,7 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--color-border);
     position: relative;
     z-index: 1;
 }
@@ -108,14 +108,14 @@
 .accessText {
     font-size: 0.9rem;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--color-text-main);
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
 
 .arrow {
     transition: transform 0.3s ease;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--color-text-main);
 }
 
 .card:hover .arrow {

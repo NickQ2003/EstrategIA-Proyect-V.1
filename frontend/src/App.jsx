@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import Login from './pages/Login';
-import Dashboard from './pages/Dashboard';
-import Participants from './pages/Participants';
-import Attendance from './pages/Attendance';
+import MainMenu from './pages/MainMenu';
+import Dashboard from './pages/EventFlow/Dashboard';
+import Participants from './pages/EventFlow/Participants';
+import Attendance from './pages/EventFlow/Attendance';
 import Layout from './components/Layout';
 
 function App() {
@@ -13,12 +14,14 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
 
+          {/* Public Landing Page */}
+          <Route path="/" element={<MainMenu />} />
+
           {/* Protected Routes (Layout wrapper) */}
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Navigate to="/dashboard" replace />} />
-            <Route path="dashboard" element={<Dashboard />} />
-            <Route path="participants" element={<Participants />} />
-            <Route path="attendance" element={<Attendance />} />
+          <Route element={<Layout />}>
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/participants" element={<Participants />} />
+            <Route path="/attendance" element={<Attendance />} />
           </Route>
         </Routes>
       </Router>
