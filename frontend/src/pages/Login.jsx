@@ -7,13 +7,18 @@ import isologo from '../assets/isologo_estrategIA.png';
 const Login = () => {
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
-    const [role, setRole] = useState('admin');
+    const [email, setEmail] = useState('admin@estrategia.com');
+    const role = 'admin'; // Fixed: Define role constant since selector was removed
 
     const handleLogin = (e) => {
         e.preventDefault();
         setLoading(true);
         // Simulate network delay
         setTimeout(() => {
+            // Mock Auth Persistence
+            const user = { email: email, role: role };
+            localStorage.setItem('user', JSON.stringify(user));
+
             setLoading(false);
             navigate('/');
         }, 1200);
@@ -37,7 +42,8 @@ const Login = () => {
                                 type="email"
                                 className={`input ${styles.inputField}`}
                                 placeholder="admin@estrategia.com"
-                                defaultValue="admin@estrategia.com"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
                                 required
                             />
                         </div>
@@ -55,19 +61,6 @@ const Login = () => {
                                 required
                             />
                         </div>
-                    </div>
-
-                    <div>
-                        <label className={styles.label}>Rol</label>
-                        <select
-                            className="input"
-                            value={role}
-                            onChange={(e) => setRole(e.target.value)}
-                        >
-                            <option value="admin">Administrador</option>
-                            <option value="supervisor">Supervisor</option>
-                            <option value="digitador">Digitador</option>
-                        </select>
                     </div>
 
                     <button
