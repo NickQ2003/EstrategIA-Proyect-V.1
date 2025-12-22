@@ -25,7 +25,15 @@ SECRET_KEY = 'django-insecure-0fk-gm4%e1y=+z+4x1we!fnj_*i-h8!7&r)s(s$tjcvqp3sl44
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
+# Celery Configuration
+CELERY_BROKER_URL = 'redis://redis:6379/0'
+CELERY_RESULT_BACKEND = 'redis://redis:6379/0'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'                                    
+CELERY_TIMEZONE = 'UTC'
 
 
 # Application definition
@@ -39,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
+    'django_celery_results',
     'api',
 ]
 
