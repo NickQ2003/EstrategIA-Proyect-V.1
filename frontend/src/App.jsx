@@ -5,6 +5,7 @@ import MainMenu from './pages/MainMenu';
 import Dashboard from './pages/EventFlow/Dashboard';
 import Participants from './pages/EventFlow/Participants';
 import Attendance from './pages/EventFlow/Attendance';
+import TalentScoutDashboard from './pages/TalentScout/Dashboard';
 import Layout from './components/Layout';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/participants" element={<Participants />} />
             <Route path="/attendance" element={<Attendance />} />
+            <Route path="/talent-scout" element={<TalentScoutDashboard />} />
           </Route>
         </Routes>
       </Router>

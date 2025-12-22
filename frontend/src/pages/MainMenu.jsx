@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { LayoutDashboard, LogIn, UserPlus } from 'lucide-react';
+import { LayoutDashboard, LogIn, UserPlus, Briefcase } from 'lucide-react';
 import Cards from '../components/Cards';
 import ThemeToggle from '../components/ThemeToggle';
 import UserMenu from '../components/UserMenu';
@@ -37,6 +37,13 @@ const MainMenu = () => {
             description: 'Gestión de participantes, asistencia y reportes.',
             path: '/dashboard',
             color: 'blue'
+        },
+        {
+            icon: Briefcase,
+            title: 'TalentScout',
+            description: 'Reclutamiento y evaluación de perfiles.',
+            path: '/talent-scout',
+            color: 'purple'
         }
     ];
 

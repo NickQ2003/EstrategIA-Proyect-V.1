@@ -1,6 +1,6 @@
 import React from 'react';
-import { Outlet, NavLink, useNavigate } from 'react-router-dom';
-import { LayoutDashboard, Users, UserCheck, LogOut } from 'lucide-react';
+import { Outlet, NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { LayoutDashboard, Users, UserCheck, LogOut, Briefcase } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 import UserMenu from './UserMenu';
 import styles from '../styles/modules/Layout.module.css';
@@ -8,13 +8,18 @@ import logo from '../assets/imajilogo_estrategIA.png';
 
 const Layout = () => {
     const navigate = useNavigate();
+    const location = useLocation();
 
     const handleLogout = () => {
         localStorage.removeItem('user');
         navigate('/login');
     };
 
-    const navItems = [
+    const isTalentScout = location.pathname.startsWith('/talent-scout');
+
+    const navItems = isTalentScout ? [
+        { icon: LayoutDashboard, label: 'Dashboard', path: '/talent-scout' },
+    ] : [
         { icon: LayoutDashboard, label: 'Dashboard', path: '/dashboard' },
         { icon: Users, label: 'Participantes', path: '/participants' },
         { icon: UserCheck, label: 'Asistencia', path: '/attendance' },
